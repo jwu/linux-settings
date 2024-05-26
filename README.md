@@ -49,10 +49,45 @@ curl -sfL https://raw.githubusercontent.com/ducaale/xh/master/install.sh | sh
 sudo apt install fd-find
 ```
 
+### install onedrive
+
+```bash
+# install dependency
+sudo apt install build-essential
+sudo apt install libcurl4-openssl-dev libsqlite3-dev pkg-config git curl
+curl -fsS https://dlang.org/install.sh | bash -s dmd
+sudo apt install libnotify-dev
+
+# compile onedrive
+git clone https://github.com/abraunegg/onedrive.git
+cd onedrive
+
+# Run `source ~/dlang/dmd-2.108.1/activate.fish` in your shell to use dmd-2.108.1.
+# This will setup PATH, LIBRARY_PATH, LD_LIBRARY_PATH, DMD, DC, and PS1.
+source ~/dlang/dmd-2.108.1/activate.fish
+
+./configure
+make clean; make;
+sudo make install
+
+# Run `deactivate` later on to restore your environment.
+deactivate
+
+# first time sync
+cp ./config/onedrive ~/.config/onedrive/config
+onedrive --synchronize
+
+# create service
+cp ./service/onedrive.service /etc/systemd/system/onedrive.service
+sudo systemctl daemon-reload
+sudo systemctl enable onedrive
+sudo systemctl start onedrive
+```
+
 ### update desktop apps
 
 ```bash
-cp godot.desktop ~/.local/share/applications/godot.desktop
-cp blender.desktop ~/.local/share/applications/blender.desktop
+cp ./desktop/godot.desktop ~/.local/share/applications/godot.desktop
+cp ./desktop/blender.desktop ~/.local/share/applications/blender.desktop
 update-desktop-database ~/.local/share/applications/
 ```
