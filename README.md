@@ -15,6 +15,14 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20
 curl https://pyenv.run | bash
 ```
 
+### install nvm
+
+```bash
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/nvm.fish
+nvm install latest
+```
+
 ### install nvim
 
 ```bash
@@ -39,4 +47,12 @@ cargo install procs
 cargo install du-dust
 curl -sfL https://raw.githubusercontent.com/ducaale/xh/master/install.sh | sh
 sudo apt install fd-find
+```
+
+### update desktop apps
+
+```bash
+cp godot.desktop ~/.local/share/applications/godot.desktop
+cp blender.desktop ~/.local/share/applications/blender.desktop
+update-desktop-database ~/.local/share/applications/
 ```

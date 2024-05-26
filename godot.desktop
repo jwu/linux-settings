@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=4.2.2
+Name=Godot Engine
+Comment=Godot Engine IDE
+Exec=/home/jwu/tools/godot/Godot_v4.2.2-stable_linux.x86_64
+Icon=/home/jwu/tools/godot/icon.svg
+Terminal=false
+Type=Application
+Categories=Development;IDE;
