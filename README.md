@@ -6,7 +6,7 @@ sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extensions 
 
 gsettings set org.gnome.desktop.peripherals.keyboard delay 300
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 ```
 
 ### install pyenv
@@ -91,3 +91,15 @@ cp ./desktop/godot.desktop ~/.local/share/applications/godot.desktop
 cp ./desktop/blender.desktop ~/.local/share/applications/blender.desktop
 update-desktop-database ~/.local/share/applications/
 ```
+
+### desktop apps
+
+- [Obsidian](https://obsidian.md/download)
+- [draw.io](https://www.drawio.com/)
+- [Godot](https://godotengine.org/download/linux/)
+- [Blender](https://www.blender.org/download/)
+- [Krita](https://krita.org/)
+- [Telegram Desktop](https://desktop.telegram.org/)
+- [Discord Desktop](https://discord.com/download)
+- [VLC](https://www.videolan.org/)
+- [MDC](https://github.com/mvdctop/Movie_Data_Capture/releases)
