@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install gnome-tweaks 
 sudo apt install gnome-shell-extensions 
 
-gsettings set org.gnome.desktop.peripherals.keyboard delay 300
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 ```
 
